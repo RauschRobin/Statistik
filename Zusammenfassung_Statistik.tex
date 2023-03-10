@@ -44,7 +44,7 @@
 \newpage
 \section{Statistik Grundlagen und Definitionen}
 \subsection{Arithmetischer Mittelwert}
-Der Arithmetische Mittelwert ist der \glqq normale\grqq{} Durchschnitt. Also addiert man alle Werte auf und teilt durch die Anzahl der Werte. Beispiel:\\
+Der Arithmetische Mittelwert $\bar{x} $ ist der \glqq normale\grqq{} Durchschnitt. Also addiert man alle Werte auf und teilt durch die Anzahl der Werte. Beispiel:\\
 \begin{equation}
 	\frac{1 + 2 + 2 + 1 + 4}{5} = 2
 \end{equation}
@@ -109,5 +109,46 @@ Die Empirische Verteilungsfunktion ist die Funktion der kumulierten relativen H�
 	F(x) = \sum_{i}^{} f_i  
 \end{equation}
 \includegraphics[width=\textwidth]{Bilder/empirische_verteilungsfunktion.png}
+
+\subsection{Modalwert}
+Der Modalwert ist der Messwert eines Datensatzes, welcher am häufigsten auftritt.
+
+\subsection{Median}
+Der Medianm $\tilde{x}$ ist der Wert, der genau in der Mitte eines \textbf{geordneten} Datensatzes liegt. Beispiel:\\
+Datensatz = \{ 1, 2, 2, 4, 70\}\\
+Median = 2
+
+\subsection{Kennwerte}
+\subsubsection{Quantil und Quartil}
+Der Median ist ebenfalls ein Quantil:\\
+$x_{0,5} = \tilde{x} $\\
+Das Quantil kann aber auch ein Quartil oder anderes sein:\\
+unteres Quartil: $x_{0,25}$\\
+oberes Quartil: $x_{0,75}$\\
+\begin{equation}
+	x_p = x_{0,75} = 0,5(x_8 + x_9) = \frac{1}{2} (3 + 3) = 3 = x_{0,75} = q_{obere}
+\end{equation}
+
+\subsubsection{Decil}
+Als Decil werden alle Quantile mit $p = k * 0,1; k = 1; 2; ...; 10 $\\
+Also $\{ x_{0,1}; x_{0,2}; x_{0,3};$ ...$; x_{0,8}; x_{0,9}; x_{1,0}; \}$
+
+\subsubsection{Percentil}
+Als Percentil werden alle Quantile mit $p = k * 0,01; k = 1; 2; ...; 100$\\
+Also $\{ x_{0,01}; x_{0,02}; x_{0,03};$ ...$; x_{0,98}; x_{0,99}; x_{1,0}; \}$
+
+\subsection{Boxplot}
+\includegraphics[width=\textwidth]{Bilder/boxplot.png}
+Whisker sind minimale und maximale Werte.
+
+\subsection{Empirische Varianz}
+Diese gibt an, wie stark die einzelnen Werte um den Mittelwert abweichen.
+
+\subsection{Empirische Standardabweichung}
+Die empirische Standardabweichung SD(x) lässt sich aus der empirischen Varianz berechnen:\\
+\begin{equation}
+	SD(x) = s = \sqrt{VAR} = \sqrt{s^2} = \sqrt{\frac{1}{n - 1} \sum_{i = 1}^{n} (x_i - \tilde{x})^2}  
+\end{equation}
+\textcolor{lightgray}{Immer positiv!}
 
 \end{document}
